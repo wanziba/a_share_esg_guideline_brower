@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A股《可持续发展报告指引》浏览器（丸爸）</title>
+    <link rel="stylesheet" href="./static/style.css" />
+</head>
+
+<body>
+    <div class="app-window">
+
+        <!-- 顶部工具栏 -->
+        <header class="topbar">
+            <div class="tool-title">A股《可持续发展报告指引》浏览器（丸爸）</div>
+            <div class="toolbar-search">
+                <input id="searchInput" class="search-input" type="search" placeholder="请输入关键词" autocomplete="off" />
+                <button id="searchBtn" class="toolbar-btn toolbar-btn-ghost" type="button">搜索</button>
+            </div>
+        </header>
+
+        <!-- 工作区 -->
+        <div class="workspace-shell">
+
+            <!-- 左侧导航 -->
+            <aside class="sidebar">
+                <div class="sidebar-head">
+                    <div class="sidebar-title">目录导航</div>
+                </div>
+                <div id="navTree" class="nav-tree"></div>
+            </aside>
+
+            <!-- 右侧主内容 -->
+            <main class="main-shell">
+
+                <!-- 条列表面板 -->
+                <section class="article-panel">
+                    <div class="article-panel-head">
+                        <div id="breadcrumb" class="breadcrumb"></div>
+                        <h1 id="viewTitle" class="view-title"></h1>
+                        <div id="viewStats" class="view-stats"></div>
+                    </div>
+                    <div id="contentList" class="article-list"></div>
+                </section>
+
+                <!-- 款和指引内容面板 -->
+                <section class="clause-panel">
+                    <div class="clause-panel-head">
+                        <h2 id="clausesTitle" class="clauses-title"></h2>
+                    </div>
+                    <div id="clausesList" class="clauses-list"></div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <div id="termTooltip" class="term-tooltip"></div>
+    <div id="typeTooltip" class="type-tooltip"></div>
+
+    <script src="./static/guideline-data.js"></script>
+    <script src="./static/app.js"></script>
+</body>
+
+</html>
